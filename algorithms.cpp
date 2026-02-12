@@ -1,7 +1,8 @@
-#include <random>
+#include "steps.h"
 #include <iostream>
+#include <random>
 #include <vector>
- 
+
 void bubbleSort(std::vector<int> &arr) {
   int vectorSize = arr.size();
   for (int i = 0; i < vectorSize - 1; i++) {

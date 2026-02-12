@@ -1,4 +1,5 @@
 #include "algorithms.cpp"
+#include "steps.h"
 #include <iostream>
 #include <random> //for rand() fucntion
 #include <vector>
@@ -12,10 +13,10 @@ int main() {
   std::mt19937 rng(rd());
   // initializes random seed to rng
   // for random numbers
+
   std::cout << "What size would you like your array?" << std::endl;
   int size;
   std::cin >> size;
-
   auto arr = arrayMaker(size, rng);
   printVector(arr);
   bubbleSort(arr);
