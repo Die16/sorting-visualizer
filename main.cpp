@@ -1,4 +1,4 @@
-#include "algorithms.cpp"
+#include "algorithms.h"
 #include "steps.h"
 #include <iostream>
 #include <random> //for rand() fucntion
