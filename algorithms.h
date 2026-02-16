@@ -1,4 +1,4 @@
 #pragma once
+#include "steps.h"
 #include <vector>
-void bubbleSort(std::vector<int> &arr);
- 
+std::vector<Step> bubbleSort(std::vector<int> &arr);

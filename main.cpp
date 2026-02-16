@@ -6,7 +6,7 @@
 
 std::vector<int> arrayMaker(int size, std::mt19937 &rng);
 void printVector(const std::vector<int> &v);
-void bubbleSort(std::vector<int> &arr);
+void printSteps(const std::vector<Step> &steps);
 
 int main() {
   std::random_device rd;
@@ -19,8 +19,9 @@ int main() {
   std::cin >> size;
   auto arr = arrayMaker(size, rng);
   printVector(arr);
-  bubbleSort(arr);
+  auto vizualizer = bubbleSort(arr);
   printVector(arr);
+  printSteps(vizualizer);
 
   return 0;
 }
@@ -41,4 +42,23 @@ void printVector(const std::vector<int> &v) {
     std::cout << x << " ";
   }
   std::cout << "\n";
+}
+
+void printSteps(const std::vector<Step> &steps) {
+  for (const Step &s : steps) {
+
+    switch (s.type) {
+    case Compare:
+      std::cout << "Compare(" << s.i << ", " << s.j << ")\n";
+      break;
+
+    case Swap:
+      std::cout << "Swap(" << s.i << ", " << s.j << ")\n";
+      break;
+
+    case Set:
+      std::cout << "Set(" << s.i << ", " << s.j << ")\n";
+      break;
+    }
+  }
 }
