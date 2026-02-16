@@ -22,7 +22,6 @@ int main() {
   auto vizualizer = bubbleSort(arr);
   printVector(arr);
   printSteps(vizualizer);
-
   return 0;
 }
 
